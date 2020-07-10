@@ -20,19 +20,21 @@ RANLIB      = ranlib
 #=======================
 CCFLAGS		= -O3 -m64 -std=c++11 -fopenmp
 
-#c_obj = ntd2eu.o
+obj = ntd2eu.o
 	  
 #cpp_obj = ntd2eu.o
 
 INCS = -I include
+TARGETS_O	:= $(TARGETS_SRC:.c=.o)
 
 .PHONY: all clean
 
-all: MakeExe
+all: MakeObj MakeExe
 
+MakeObj: $(TARGETS_O)
 
 %.o: %.c
-	$(CC)
+	$(CC) $(CCFLAGS) -c
 
 #%.o: src/cpp/%.cpp
 #	$(CXX) $(CCFLAGS)
