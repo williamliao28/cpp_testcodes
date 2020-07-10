@@ -37,8 +37,8 @@ int main(int argc, char **argv){
 
     printf("\n");
 
-    printf("%f\n",b);
-    printf("%lf\n",c);
+    printf("%.10f\n",b);
+    printf("%.10f\n",c);
 
     return 0;
 }
