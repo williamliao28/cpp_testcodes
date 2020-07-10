@@ -39,7 +39,7 @@ MakeObj: $(TARGETS_O)
 #%.o: src/cpp/%.cpp
 #	$(CXX) $(CCFLAGS)
 
-MakeExe: ntd2eu.out datatype.out
+MakeExe: ntd2eu.out datatype.out datarange.out
 
 ntd2eu.out: ntd2eu.o
 	$(LOADER) $< -o $@ $(CCFLAGS)
