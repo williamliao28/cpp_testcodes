@@ -16,7 +16,7 @@ int main()
 
 	/*3.將結果(歐元幣值)顯示在螢幕上*/
 
-	printf("the amount in Euros=%lf€\n",Euros);
+	printf("the amount in Euros=%lf\n",Euros);
 
 	/*程式結束*/
 
