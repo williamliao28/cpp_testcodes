@@ -18,7 +18,7 @@ RANLIB      = ranlib
 #=======================
 # Flag settings.
 #=======================
-CCFLAGS		= -O3 -m64 -std=c++11 -fopenmp
+CCFLAGS		= -O3 -m64
 
 obj = ntd2eu.o
 	  
