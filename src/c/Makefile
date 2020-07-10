@@ -34,16 +34,15 @@ all: MakeObj MakeExe
 MakeObj: $(TARGETS_O)
 
 %.o: %.c
-	$(CC) $(CCFLAGS) -c
+	$(CC) -c $< $(CCFLAGS)
 
 #%.o: src/cpp/%.cpp
 #	$(CXX) $(CCFLAGS)
 
-
 MakeExe: ntd2eu.out
 
 ntd2eu.out: ntd2eu.o
-	$(LOADER) $(CCFLAGS) -o $@
+	$(LOADER) $< -o $@ $(CCFLAGS)
 
 #surfpara.out: surfpara.o $(surfpara_obj)
 #	$(LOADER) $(CCFLAGS) -o $@ $< $(surfpara_obj) $(MKLLNKS) $(CUDALNKS)
