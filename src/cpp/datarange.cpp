@@ -6,6 +6,7 @@ Find implementation's ranges for positive numeric data
 #include <limits.h>
 #include <float.h>
 #include <iostream>
+#include <iomanip>
 
 int main(int argc, char **argv){
     std::cout << "Range of positive values of type int: 1 . . " << INT_MAX << std::endl;
