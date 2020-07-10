@@ -37,8 +37,8 @@ int main(int argc, char **argv){
 
     printf("\n");
 
-    printf("%.10f\n",b);
-    printf("%.10f\n",c);
+    printf("single precision: %.10f\n",b);
+    printf("double precision: %.10f\n",c);
 
     return 0;
 }
