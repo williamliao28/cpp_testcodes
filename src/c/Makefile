@@ -20,7 +20,7 @@ RANLIB      = ranlib
 #=======================
 CCFLAGS		= -O3 -m64
 
-obj = ntd2eu.o
+obj = ntd2eu.o datatype.o
 	  
 #cpp_obj = ntd2eu.o
 
@@ -39,13 +39,13 @@ MakeObj: $(TARGETS_O)
 #%.o: src/cpp/%.cpp
 #	$(CXX) $(CCFLAGS)
 
-MakeExe: ntd2eu.out
+MakeExe: ntd2eu.out datatype.out
 
 ntd2eu.out: ntd2eu.o
 	$(LOADER) $< -o $@ $(CCFLAGS)
 
-#surfpara.out: surfpara.o $(surfpara_obj)
-#	$(LOADER) $(CCFLAGS) -o $@ $< $(surfpara_obj) $(MKLLNKS) $(CUDALNKS)
+datatype.out: datatype.o
+	$(LOADER) $< -o $@ $(CCFLAGS)
 
 #surfpara_magma.out: surfpara.o $(surfpara_magma_obj)
 #	$(LOADER) $(CCFLAGS) -o $@ $< $(surfpara_magma_obj) $(MKLLIBS) $(CUDALIBS) $(MAGMALIBS) $(MKLLNKS) $(CUDALNKS) $(MAGMALNKS)

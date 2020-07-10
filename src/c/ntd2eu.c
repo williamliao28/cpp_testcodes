@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define Exchange_Rate 40.41        /*程式中"匯率"以Exchange_Rate表示*/
-int main()
+int main(int argc, char **argv)
 {
 	double NT_dollar;  /*輸入的新台幣幣值*/
 	double Euros;      /*算出的歐元幣值*/
