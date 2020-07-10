@@ -17,7 +17,7 @@ int main()
 
 	/*3.將結果(歐元幣值)顯示在螢幕上*/
 
-	std::cout.setf(ios::fixed, ios::floatfield);
+	std::cout.setf(std::ios::fixed, std::ios::floatfield);
     std::cout.precision(2);
     std::cout << "the amount in Euros=" << Euros << std::endl;
 
