@@ -20,7 +20,7 @@ RANLIB      = ranlib
 #=======================
 CCFLAGS		= -O3 -m64
 
-obj = ntd2eu.o datatype.o
+obj = ntd2eu.o datatype.o datarange.o
 	  
 #cpp_obj = ntd2eu.o
 
@@ -47,8 +47,8 @@ ntd2eu.out: ntd2eu.o
 datatype.out: datatype.o
 	$(LOADER) $< -o $@ $(CCFLAGS)
 
-#surfpara_magma.out: surfpara.o $(surfpara_magma_obj)
-#	$(LOADER) $(CCFLAGS) -o $@ $< $(surfpara_magma_obj) $(MKLLIBS) $(CUDALIBS) $(MAGMALIBS) $(MKLLNKS) $(CUDALNKS) $(MAGMALNKS)
+datarange.out: datarange.o
+	$(LOADER) $< -o $@ $(CCFLAGS)
 
 clean:
 	-rm *.o -f
